@@ -9,6 +9,7 @@ jobs:
       - name: add assignees
         uses: actions-awsome/pr-helper@1.0.1
         with:
+          actions: 'add-assignees'
           token: ${{ github.token }}
           assignees: 'jeremywu'
           pr-number: ${{ github.event.pull_request.number }}
