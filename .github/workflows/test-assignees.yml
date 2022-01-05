@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: add assignees
-        uses: actions-awsome/pr-helper@1.0.4
+        uses: actions-awsome/pr-helper@1.0.5
         with:
           actions: 'add-assignees'
           token: ${{ github.token }}
-          assignees: 'jeremywu'
+          assignees: 'JeremyWuuuuu'
           pr-number: ${{ github.event.pull_request.number }}
