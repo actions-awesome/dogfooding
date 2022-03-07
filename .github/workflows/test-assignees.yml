@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: add assignees
-        uses: actions-awsome/pr-helper@1.0.11
+        uses: actions-awsome/pr-helper@1.0.12
         with:
           actions: 'add-assignees, add-reviewers, greeting'
           token: ${{ github.token }}
@@ -15,5 +15,3 @@ jobs:
           pr-number: ${{ github.event.pull_request.number }}
           greeting-message: 'Hello %user%, thank you for contributing to %repo%, please see our [guideline](%guideline%) to see how to make contribution'
           greeting-guideline-address: 'https://github.com/element-plus/element-plus/blob/dev/CONTRIBUTING.md'
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
