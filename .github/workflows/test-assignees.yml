@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: add assignees
-        uses: actions-awsome/pr-helper@1.0.12
+        uses: actions-awesome/pr-helper@1.0.13
         with:
           actions: 'add-assignees, add-reviewers, greeting'
           token: ${{ github.token }}
