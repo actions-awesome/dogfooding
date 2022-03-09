@@ -1,0 +1,20 @@
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set output
+        id: tag
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - name: Tweet
+        uses: actions-awesome/tweet-bot@1.0.0
+        with:
+          consumer_key: ${{ secrets.CONSUMER_KEY }}
+          consumer_secret: ${{ secrets.CONSUMER_SECRET }}
+          api_token_key: ${{ secrets.API_TOKEN_KEY }}
+          api_token_secret: ${{ secrets.API_TOKEN_SECRET }}
+          tweet: Version ${{ steps.tag.output.tag }} just released: checkout out the detailed release note: https://github.com/actions-awesome/dogfooding/releases/tag/${{ steps.tag.output.tag }}
