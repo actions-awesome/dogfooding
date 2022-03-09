@@ -17,4 +17,4 @@ jobs:
           consumer_secret: ${{ secrets.CONSUMER_SECRET }}
           api_token_key: ${{ secrets.API_TOKEN_KEY }}
           api_token_secret: ${{ secrets.API_TOKEN_SECRET }}
-          tweet: Version ${{ steps.tag.output.tag }} just released: checkout out the detailed release note: https://github.com/actions-awesome/dogfooding/releases/tag/${{ steps.tag.output.tag }}
+          tweet: "Version ${{ steps.tag.output.tag }} just released: checkout out the detailed release note: https://github.com/actions-awesome/dogfooding/releases/tag/${{ steps.tag.output.tag }}"
